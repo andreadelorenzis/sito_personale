@@ -11,10 +11,20 @@ a {
 
 p {
   color: #f5f5f5;
+  line-height: 23px;
+  text-align: justify;
+}
+
+h1, h2, h3 {
+  color: #ffffff;
 }
 
 h1 {
-  color: #ffffff;
+  font-size: 38px;
+}
+
+h3 {
+  font-size: 20px;
 }
 
 body {
@@ -69,7 +79,7 @@ nav ul{
 }
 
 .welcome-section {
-  width: 70%;
+  width: 72%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -121,4 +131,106 @@ nav ul{
   font-size: 20px;
   margin-top: 25px;
   display: block;
+  margin-bottom: 200px;
+}
+
+.welcome-arrow {
+  color: #ffffff;
+  font-size: 35px;
+  position: absolute;
+  top: 50%;
+  right: 10px;
+}
+
+.skills-header {
+  text-align: center;
+}
+
+.skills-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 25px;
+  margin-bottom: 200px;
+}
+
+.skill-box {
+  width: 250px;
+  margin: 20px 0;
+}
+
+.skill-box:hover > .skill-title:after,
+.skill-box:hover > .skill-title:before {
+  width: 35px;
+}
+
+.skill-box:hover .skill-img {
+  transform: translateY(-10px);
+}
+
+.skill-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.skill-title:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 50%;
+  width: 0;
+  height: 4px;
+  border-radius: 2px 0 0 2px;
+  background-color: #68e0cf;
+  transition: .5s;
+}
+
+.skill-title:before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 4px;
+  border-radius: 0 2px 2px 0;
+  background-color: #68e0cf;
+  transition: .5s;
+}
+.skill-img {
+  width: 90px;
+  height: 90px;
+  border-radius: 45px;
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  transition: 0.5s;
+}
+
+.skill-icon {
+  width: 50px;
+}
+
+.skill-title h3 {
+  margin: 15px;
+}
+
+@media screen and (min-width: 640px) {
+  .skills-container {
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 4rem;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .skills-container {
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 6rem;
+  }
 }
