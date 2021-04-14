@@ -255,6 +255,8 @@ nav ul{
   margin-top: 50px;
   text-align: center;
   width: 100%;
+  padding-bottom: 50px;
+  border-bottom: 1px solid #4c5158;
 }
 
 .projects-container {
@@ -292,6 +294,61 @@ nav ul{
   font-size: 14px;
 }
 
+.contact-section {
+  margin-top: 50px;
+  border-bottom: 1px solid #4c5158;
+  padding-bottom: 50px;
+}
+
+.contact-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-title {
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.contact-info p {
+  margin-bottom: 10px;
+}
+
+.contact-info span{
+  color: #68e0cf;
+  margin-right: 10px;
+}
+
+.form-title {
+  padding-top: 25px;
+}
+
+.contact-form {
+  margin-top: 10px;
+}
+
+.contact-form input {
+  border: 1px solid #4c5158;
+  padding: 15px;
+  border-radius: 3px;
+  color: #bababb;
+  background-color: #373b40;
+  width: 100%;
+  margin: 10px 0;
+}
+
+footer {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  width: 100%;
+}
+
+footer .social-links {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
 @media screen and (min-width: 640px) {
   .skills-container {
     grid-template-columns: repeat(2, 1fr);
@@ -307,6 +364,24 @@ nav ul{
     grid-gap: 4rem;
   }
 
+  .contact-container {
+    flex-direction: row;
+  }
+
+  .contact-info {
+    display: flex;
+    flex-direction: column;
+    margin-right: 50px;
+  }
+
+  .form-title,.contact-form {
+    padding: 0;
+    margin: 0;
+  }
+
+  footer {
+    width: 400px;
+  }
 }
 
 @media screen and (min-width: 1280px) {
