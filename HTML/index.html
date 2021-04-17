@@ -5,29 +5,69 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Andrea De Lorenzis</title>
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/f3c6b5ebd7.js" crossorigin="anonymous"></script>
   </head>
   <body>
-    <header>
-      <div class="logo">
-        <span class="logo-icon">A</span>
-        <span class="logo-text">Andrea De Lorenzis</span>
-      </div>
-      <nav>
-        <img src="../images/menu.svg" alt="menu" class="menu-icon" width="18" height="21">
-        <ul>
-          <li><a href="welcome-link">Welcome</a></li>
-          <li><a href="skills-link">Skills</a></li>
-          <li><a href="projects-link">Projects</a></li>
-          <li><a href="resume-link">Resume</a></li>
-          <li><a href="contact-link">Contact</a></li>
-        </ul>
-      </nav>
-    </header>
 
-    <div class="content">
+    <div class="loader-bg-1">
+      <div class="loader-bg-2">
+        <div class="loader"></div>
+      </div>
+    </div>
+
+    <nav>
+      <div class="content">
+        <a class="logo-link" href="#welcome-section">
+          <span class="logo-icon">A</span>
+          <span class="logo-text">Andrea De Lorenzis</span>
+        </a>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+          <div class="menu-btn">
+            <div class="menu-btn-burger"></div>
+          </div>
+        </label>
+        <ul class="nav-links">
+          <li>
+            <a href="#welcome-section">
+              <span class="uno">Welcome</span>
+              <span class="due">Welcome</span>
+            </a>
+          </li>
+          <li>
+            <a href="#skills-section">
+              <span class="uno">Skills</span>
+              <span class="due">Skills</span>
+            </a>
+          </li>
+          <li>
+            <a href="#projects-section">
+              <span class="uno">Projects</span>
+              <span class="due">Projects</span>
+            </a>
+          </li>
+          <li>
+            <a href="#resume-section">
+              <span class="uno">Resume</span>
+              <span class="due">Resume</span>
+            </a>
+          </li>
+          <li>
+            <a href="#contact-section">
+              <span class="uno">Contact</span>
+              <span class="due">Contact</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <a name="welcome-section"></a>
       <section class="welcome-section">
         <div class="welcome-img-container">
-          <img src="../images/gatto.jpeg" alt="" class="welcome-image" width="200px" height="200px">
+          <img src="../images/th-2.jpg" alt="" class="welcome-image" width="300px" height="300px">
         </div>
           <div class="welcome-text">
             <h1>Andrea De Lorenzis</h1>
@@ -36,12 +76,25 @@
               risus non condimentum gravida, odio mauris ullamcorper felis, ut venenatis
               purus ex eu mi. Quisque imperdiet lacinia urna, a placerat sapien pretium eu.</p>
             <div class="welcome-buttons">
-              <a href="#" class="download">Download CV</a>
-              <a href="#" class="contact">Contact</a>
+              <a href="#" class="download">
+                <span class="animation-span">
+                  <span>Download CV</span>
+                  <span>Download CV</span>
+                </span>
+              </a>
+              <a href="#" class="contact">
+                <span class="animation-span">
+                  <span>Contact</span>
+                  <span>Contact</span>
+                </span>
+              </a>
             </div>
           </div>
       </section>
 
+      <hr>
+
+      <a name="skills-section"></a>
       <section class="skills-section">
         <div class="skills-header">
           <h1>My skills</h1>
@@ -102,16 +155,23 @@
             <p>Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh.</p>
           </div>
         </div>
+        <a name="projects-section"></a>
       </section>
+
+      <hr>
 
       <section class="projects-section">
         <h1 class="projects-title">Portfolio</h1>
         <div class="projects-container">
           <div class="project-box">
               <div class="project-title">
-                <img src="../images/th.jpg" alt="" class="project-img" height="100">
+                <img src="../images/th.jpg" alt="" class="project-img">
                 <h3>Javascript counter</h3>
               </div>
+          </div>
+          <div class="first project-info">
+            <img src="../images/close.svg" alt="close" class="close-img">
+            <h1>first project</h1>
           </div>
           <div class="project-box">
               <div class="project-title">
@@ -119,11 +179,9 @@
                 <h3>Javascript counter</h3>
               </div>
           </div>
-          <div class="project-box">
-              <div class="project-title">
-                <img src="../images/th.jpg" alt="" class="project-img">
-                <h3>Javascript counter</h3>
-              </div>
+          <div class="second project-info">
+            <img src="../images/close.svg" alt="close" class="close-img">
+            <h1>first project</h1>
           </div>
           <div class="project-box">
               <div class="project-title">
@@ -131,25 +189,54 @@
                 <h3>Javascript counter</h3>
               </div>
           </div>
-          <div class="project-box">
-              <div class="project-title">
-                <img src="../images/th.jpg" alt="" class="project-img">
-                <h3>Javascript counter</h3>
-              </div>
+          <div class="third project-info">
+            <img src="../images/close.svg" alt="close" class="close-img">
+            <h1>first project</h1>
           </div>
           <div class="project-box">
               <div class="project-title">
                 <img src="../images/th.jpg" alt="" class="project-img">
                 <h3>Javascript counter</h3>
               </div>
+          </div>
+          <div class="fourth project-info">
+            <img src="../images/close.svg" alt="close" class="close-img">
+            <h1>first project</h1>
+          </div>
+          <div class="project-box">
+              <div class="project-title">
+                <img src="../images/th.jpg" alt="" class="project-img">
+                <h3>Javascript counter</h3>
+              </div>
+          </div>
+          <div class="fifth project-info">
+            <img src="../images/close.svg" alt="close" class="close-img">
+            <h1>first project</h1>
+          </div>
+          <div class="project-box">
+              <div class="project-title">
+                <img src="../images/th.jpg" alt="" class="project-img">
+                <h3>Javascript counter</h3>
+              </div>
+          </div>
+          <div class="sixth project-info">
+            <img src="../images/close.svg" alt="close" class="close-img">
+            <h1>first project</h1>
           </div>
         </div>
+      <a name="resume-section"></a>
       </section>
+
+      <hr>
 
       <section class="resume-section">
 
       </section>
 
+      <hr>
+
+
+      <a name="contact-section"></a>
       <section class="contact-section">
         <h1 class="contact-title">Contact</h1>
         <div class="contact-container">
@@ -160,23 +247,42 @@
           </div>
           <div class="contact-form">
             <h3 class="form-title">How can I help you?</h3>
-            <input type="text" value="Full Name">
-            <input type="text" value="Email Address">
-            <input type="text" value="Subject">
-            <input type="textarea" value="Message">
-            <input type="button" value="Send message">
+            <div class="form-group">
+              <span class="label">Full Name</span>
+              <input type="text" placeholder="ej.:John Smith">
+            </div>
+            <div class="form-group">
+              <span class="label">Email address</span>
+              <input type="text" placeholder="Email Address">
+            </div>
+            <div class="form-group">
+              <span class="label">Subject</span>
+              <input type="text" placeholder="Subject">
+            </div>
+            <div class="form-group">
+              <span class="label">Message</span>
+              <textarea placeholder="Message" rows="10"></textarea>
+            </div>
+            <button>
+              <span class="animation-span">
+                <span>Send message</span>
+                <span>Send message</span>
+              </span>
+            </button>
           </div>
         </div>
       </section>
 
+      <hr>
+
       <footer>
         <div class="social-links">
-          <a href="#">Linkedin</a>
-          <a href="#">Facebook</a>
-          <a href="#">Twitter</a>
+          <a href="#"><i class="fab fa-linkedin-in fa-sm"></i></a>
+          <a href="#"><i class="fab fa-facebook-f fa-sm"></i></a>
+          <a href="#"><i class="fab fa-twitter fa-sm"></i></a>
         </div>
       </footer>
-    </div>
 
+    <script type="text/javascript" src="../Javascript/index.js"></script>
   </body>
 </html>
