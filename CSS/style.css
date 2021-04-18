@@ -30,8 +30,8 @@ button {
 
 p {
   color: #f5f5f5;
-  line-height: 23px;
-  text-align: justify;
+  line-height: 1.75em;
+  text-align: left;
   font-weight: 400;
 }
 
@@ -287,8 +287,8 @@ nav ul li a:hover span {
 }
 
 section {
-  width: 75%;
-  max-width: 1000px;
+  width: 80%;
+  max-width: 1300px;
 }
 
 .welcome-section {
@@ -297,37 +297,49 @@ section {
   align-items: center;
   text-align: center;
   padding-top: 130px;
+  max-width: 1100px;
 }
 
 .welcome-img-container {
-  width: 320px;
-  height: 320px;
-  border-radius: 50%;
-  background-color: rgba(100, 212, 194, 0.8);
+  width: 100%;
+  max-width: 380px;
+  max-height: 380px;
   display: flex;
   justify-content: center;
-  align-items: center;
+}
+
+.welcome-img-wrapper {
+  height: 0;
+  min-width: 230px;
+  min-height: 230px;
+  width: 100%;
+  padding-bottom: 100%;
+  background-color: rgba(100, 212, 194, 0.8);
+  border-radius: 50%;
 }
 
 .welcome-image{
   border-radius: 50%;
-  background-color: #fff;
+  width: 90%;
+  height: auto;
+  margin-top: 5%;
 }
 
 .welcome-text {
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%;
 }
 
 .welcome-text p:first-of-type{
   color: #68e0cf;
-  margin-top: 10px;
+  margin-top: 28px;
 }
 
 .welcome-text h1 {
   font-size: 30px;
-  margin-top: 25px;
+  margin-top: 10px;
 }
 
 .welcome-description {
@@ -408,6 +420,12 @@ section {
   text-align: center;
 }
 
+.skills-header span {
+  color: #68e0cf;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
 .skills-container {
   display: grid;
   grid-template-columns: 1fr;
@@ -420,11 +438,7 @@ section {
 
 .skill-box {
   width: 100%;
-}
-
-.skill-box:hover > .skill-title:after,
-.skill-box:hover > .skill-title:before {
-  width: 35px;
+  margin: 15px 0;
 }
 
 .skill-box:hover .skill-img {
@@ -439,29 +453,17 @@ section {
   margin-bottom: 10px;
 }
 
-.skill-title:after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  right: 50%;
-  width: 0;
-  height: 4px;
-  border-radius: 2px 0 0 2px;
-  background-color: #68e0cf;
-  transition: .5s;
+.skill-title h3 {
+  border-bottom: 3px solid #68e0cf;
+  padding-bottom: 8px;
 }
 
-.skill-title:before {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  width: 0;
-  height: 4px;
-  border-radius: 0 2px 2px 0;
-  background-color: #68e0cf;
-  transition: .5s;
+.skill-icons {
+  display: flex;
+  justify-content: center;
+  width: 100%;
 }
+
 .skill-img {
   width: 90px;
   height: 90px;
@@ -472,6 +474,7 @@ section {
   justify-content: center;
   position: relative;
   transition: 0.5s;
+  margin: 0 20px;
 }
 
 .skill-icon {
@@ -488,6 +491,12 @@ section {
   padding-bottom: 50px;
 }
 
+.project-header span {
+  color: #68e0cf;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
 .projects-container {
   display: grid;
   grid-template-columns: 1fr;
@@ -502,6 +511,7 @@ section {
 .project-box {
   width: 100%;
   cursor: pointer;
+  overflow: hidden;
 }
 
 .project-title {
@@ -509,10 +519,23 @@ section {
 }
 
 .project-title .project-img {
+  position: relative;
   width: 100%;
-  height: auto;
+  padding-bottom: 70%;
   border-radius: 10px;
-  background: #cbcbcb;
+  background: #585d65;
+  transition: all .3s;
+}
+
+.project-title .project-img h2{
+  color: #ffffff;
+  position: absolute;
+  width: 100%;
+  top: 45%;
+}
+
+.project-box:hover .project-img {
+  transform: scale(1.1);
 }
 
 .project-title h3 {
@@ -545,10 +568,11 @@ section {
   right: 25px;
   width: 30px;
   height: 30px;
+  cursor: pointer;
 }
 
-.resume-section {
-  height: 1000px;
+.project-info h1 {
+  margin-top: 50px;
 }
 
 .contact-section {
@@ -557,15 +581,21 @@ section {
   padding-bottom: 70px;
 }
 
+.contact-header {
+  text-align: center;
+}
+
+.contact-header span {
+  color: #68e0cf;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
 .contact-container {
   width: 100%;
   display: flex;
   flex-direction: column;
-}
-
-.contact-title {
-  margin-bottom: 25px;
-  text-align: center;
+  margin-top: 50px;
 }
 
 .contact-info p {
@@ -692,7 +722,15 @@ footer .social-links a:active {
   color: #68e0cf;
 }
 
-@media screen and (min-width: 640px) {
+@media screen and (min-width: 765px) {
+  h1 {
+    font-size: 55px;
+  }
+
+  .header {
+    text-align: left;
+  }
+
   .skills-container {
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 4rem;
@@ -725,27 +763,36 @@ footer .social-links a:active {
     margin-top: 0;
     padding-top: 0;
   }
-}
 
-@media screen and (min-width: 770px) {
   .welcome-section {
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
+    padding-bottom: 100px;
+    padding-top: 180px;
   }
 
   .welcome-img-container {
-    min-width: 250px;
-    height: 250px;
-  }
-
-  .welcome-image {
-    width: 230px;
-    height: 230px;
+    width: 40%;
+    max-width: 410px;
+    max-height: 410px;
+    margin-right: 20px;
   }
 
   .welcome-text {
-    margin-left: 50px;
+    width: 55%;
+    margin-left: 20px;
+    align-items: flex-start;
   }
+
+  .welcome-text h1 {
+    margin-top: 5px;
+  }
+
+  .welcome-text .welcome-description {
+    margin-top: 10px;
+    text-align: justify;
+  }
+
 }
 
 @media screen and (min-width: 1280px) {
@@ -784,19 +831,5 @@ footer .social-links a:active {
   .projects-container {
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 4rem;
-  }
-
-  .welcome-section {
-    padding-bottom: 50px;
-  }
-
-  .welcome-img-container {
-    min-width: 360px;
-    height: 360px;
-  }
-
-  .welcome-image {
-    width: 330px;
-    height: 330px;
   }
 }

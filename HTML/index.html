@@ -11,8 +11,8 @@
   </head>
   <body>
 
-    <div class="loader-bg-1">
-      <div class="loader-bg-2">
+    <div class="loader-bg-1 timeout">
+      <div class="loader-bg-2 timeout">
         <div class="loader"></div>
       </div>
     </div>
@@ -49,12 +49,6 @@
             </a>
           </li>
           <li>
-            <a href="#resume-section">
-              <span class="uno">Resume</span>
-              <span class="due">Resume</span>
-            </a>
-          </li>
-          <li>
             <a href="#contact-section">
               <span class="uno">Contact</span>
               <span class="due">Contact</span>
@@ -67,92 +61,118 @@
     <a name="welcome-section"></a>
       <section class="welcome-section">
         <div class="welcome-img-container">
-          <img src="../images/th-2.jpg" alt="" class="welcome-image" width="300px" height="300px">
-        </div>
-          <div class="welcome-text">
-            <h1>Andrea De Lorenzis</h1>
-            <p>Full Stack Developer</p>
-            <p class="welcome-description">Fusce tempor magna mi, non egestas velit ultricies nec. Aenean convallis,
-              risus non condimentum gravida, odio mauris ullamcorper felis, ut venenatis
-              purus ex eu mi. Quisque imperdiet lacinia urna, a placerat sapien pretium eu.</p>
-            <div class="welcome-buttons">
-              <a href="#" class="download">
-                <span class="animation-span">
-                  <span>Download CV</span>
-                  <span>Download CV</span>
-                </span>
-              </a>
-              <a href="#" class="contact">
-                <span class="animation-span">
-                  <span>Contact</span>
-                  <span>Contact</span>
-                </span>
-              </a>
-            </div>
+          <div class="welcome-img-wrapper">
+              <img src="../images/th-2.jpg" alt="" class="welcome-image">
           </div>
+        </div>
+        <div class="welcome-text">
+          <p>Full Stack Developer</p>
+          <h1>Andrea De Lorenzis</h1>
+          <p class="welcome-description">Hello! I am a Full Stack Web Developer from Italy, Urbin. I have experience in web and mobile
+             application design and building. As long as I have a mockup to work on, I can take care of the frontend and backend part of
+            the project. You can contact me for more information.
+          </p>
+          <div class="welcome-buttons">
+            <a href="#" class="download">
+              <span class="animation-span">
+                <span>Download CV</span>
+                <span>Download CV</span>
+              </span>
+            </a>
+            <a href="#contact-section" class="contact">
+              <span class="animation-span">
+                <span>Contact</span>
+                <span>Contact</span>
+              </span>
+            </a>
+          </div>
+        </div>
       </section>
 
       <hr>
 
       <a name="skills-section"></a>
       <section class="skills-section">
-        <div class="skills-header">
+        <div class="skills-header header">
           <h1>My skills</h1>
+          <span>What I can do</span>
         </div>
         <div class="skills-container">
           <div class="skill-box">
             <div class="skill-title">
-              <div class="skill-img">
-                <img src="../images/html-5.png" alt="html 5" class="skill-icon">
+              <div class="skill-icons">
+                <div class="skill-img">
+                  <img src="../images/html-5.png" alt="html and css" class="skill-icon">
+                </div>
+                <div class="skill-img">
+                  <img src="../images/css-3.png" alt="html and css" class="skill-icon">
+                </div>
               </div>
-              <h3>HTML 5</h3>
+              <h3>HTML 5 & CSS 3</h3>
             </div>
-            <p>Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh.</p>
+            <p>I can create pages using HTML and CSS that are responsive, accessible and search-engine friendly, while implementing the UI design
+               with precision.</p>
           </div>
           <div class="skill-box">
             <div class="skill-title">
-              <div class="skill-img">
-                <img src="../images/css-3.png" alt="css 3" class="skill-icon">
-              </div>
-              <h3>CSS 3</h3>
-            </div>
-            <p>Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh.</p>
-          </div>
-          <div class="skill-box">
-            <div class="skill-title">
-              <div class="skill-img">
-                <img src="../images/javascript.png" alt="javascript" class="skill-icon">
+              <div class="skill-icons">
+                <div class="skill-img">
+                  <img src="../images/javascript.png" alt="javascript" class="skill-icon">
+                </div>
               </div>
               <h3>Javascript</h3>
             </div>
-            <p>Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh.</p>
+            <p>I am proficient in the use of Javascript both client-side and server-side. I write robust, efficient, clean code that gets the job done.</p>
           </div>
           <div class="skill-box">
             <div class="skill-title">
-              <div class="skill-img">
-                <img src="../images/physics.png" alt="react.js" class="skill-icon">
+              <div class="skill-icons">
+                <div class="skill-img">
+                  <img src="../images/physics.png" alt="react.js" class="skill-icon">
+                </div>
               </div>
               <h3>React.js</h3>
             </div>
-            <p>Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh.</p>
+            <p>I mastered the React.js framework and I am able to create complex interactive user interfaces.</p>
           </div>
           <div class="skill-box">
             <div class="skill-title">
-              <div class="skill-img">
-                <img src="../images/wordpress.png" alt="wordpress" class="skill-icon">
+              <div class="skill-icons">
+                <div class="skill-img">
+                  <img src="../images/wordpress.png" alt="wordpress" class="skill-icon">
+                </div>
               </div>
               <h3>Wordpress</h3>
             </div>
-            <p>Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh.</p>
+            <p>I can create simple websites using Wordpress, using an existing template or developing one from scratch.</p>
           </div>
           <div class="skill-box">
             <div class="skill-title">
-              <div class="skill-img">
-                <img src="../images/c.png" alt="c language" class="skill-icon">
+              <div class="skill-icons">
+                <div class="skill-img">
+                  <img src="../images/php.png" alt="c language" class="skill-icon">
+                </div>
+                <div class="skill-img">
+                  <img src="../images/nodejs.png" alt="c language" class="skill-icon">
+                </div>
               </div>
-              <h3>C</h3>
+              <h3>PHP/Node.js</h3>
             </div>
-            <p>Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh.</p>
+            <p>For backend development I am proficient with Php and Node.js and I use them to create secure and robust backend servers and apis.</p>
+          </div>
+          <div class="skill-box">
+            <div class="skill-title">
+              <div class="skill-icons">
+                <div class="skill-img">
+                  <img src="../images/physics.png" alt="react.js" class="skill-icon">
+                </div>
+                <div class="skill-img">
+                  <img src="../images/flutter.jpg" alt="react.js" class="skill-icon">
+                </div>
+              </div>
+              <h3>React Native/Flutter</h3>
+            </div>
+            <p>I can use one of these two frameworks to create Full Stack Hybrid Mobile apps that work on Android and Ios.</p>
           </div>
         </div>
         <a name="projects-section"></a>
@@ -161,84 +181,94 @@
       <hr>
 
       <section class="projects-section">
-        <h1 class="projects-title">Portfolio</h1>
+        <div class="project-header header">
+          <h1 class="projects-title">Portfolio</h1>
+          <span>Latest works</span>
+        </div>
         <div class="projects-container">
           <div class="project-box">
               <div class="project-title">
-                <img src="../images/th.jpg" alt="" class="project-img">
+                <div src="../images/th.jpg" alt="" class="project-img">
+                  <h2>Coming soon...</h2>
+                </div>
                 <h3>Javascript counter</h3>
               </div>
           </div>
           <div class="first project-info">
             <img src="../images/close.svg" alt="close" class="close-img">
-            <h1>first project</h1>
+            <h1>Javascript counter</h1>
           </div>
           <div class="project-box">
               <div class="project-title">
-                <img src="../images/th.jpg" alt="" class="project-img">
-                <h3>Javascript counter</h3>
+                <div src="../images/th.jpg" alt="" class="project-img">
+                  <h2>Coming soon...</h2>
+                </div>
+                <h3>City pollution displayer</h3>
               </div>
           </div>
           <div class="second project-info">
             <img src="../images/close.svg" alt="close" class="close-img">
-            <h1>first project</h1>
+            <h1>City pollution displayer</h1>
           </div>
           <div class="project-box">
               <div class="project-title">
-                <img src="../images/th.jpg" alt="" class="project-img">
-                <h3>Javascript counter</h3>
+                <div src="../images/th.jpg" alt="" class="project-img">
+                  <h2>Coming soon...</h2>
+                </div>
+                <h3>Recycling days tracker</h3>
               </div>
           </div>
           <div class="third project-info">
             <img src="../images/close.svg" alt="close" class="close-img">
-            <h1>first project</h1>
+            <h1>Recycling days tracker</h1>
           </div>
           <div class="project-box">
               <div class="project-title">
-                <img src="../images/th.jpg" alt="" class="project-img">
-                <h3>Javascript counter</h3>
+                <div src="../images/th.jpg" alt="" class="project-img">
+                  <h2>Coming soon...</h2>
+                </div>
+                <h3>Polluted places reporting app</h3>
               </div>
           </div>
           <div class="fourth project-info">
             <img src="../images/close.svg" alt="close" class="close-img">
-            <h1>first project</h1>
+            <h1>Polluted places reporting app</h1>
           </div>
           <div class="project-box">
               <div class="project-title">
-                <img src="../images/th.jpg" alt="" class="project-img">
-                <h3>Javascript counter</h3>
+                <div src="../images/th.jpg" alt="" class="project-img">
+                  <h2>Coming soon...</h2>
+                </div>
+                <h3>Wordpress website</h3>
               </div>
           </div>
           <div class="fifth project-info">
             <img src="../images/close.svg" alt="close" class="close-img">
-            <h1>first project</h1>
+            <h1>Wordpress website</h1>
           </div>
           <div class="project-box">
               <div class="project-title">
-                <img src="../images/th.jpg" alt="" class="project-img">
-                <h3>Javascript counter</h3>
+                <div src="../images/th.jpg" alt="" class="project-img">
+                  <h2>Coming soon...</h2>
+                </div>
+                <h3>Booking management app</h3>
               </div>
           </div>
           <div class="sixth project-info">
             <img src="../images/close.svg" alt="close" class="close-img">
-            <h1>first project</h1>
+            <h1>Booking management app</h1>
           </div>
         </div>
-      <a name="resume-section"></a>
       </section>
 
       <hr>
-
-      <section class="resume-section">
-
-      </section>
-
-      <hr>
-
 
       <a name="contact-section"></a>
       <section class="contact-section">
-        <h1 class="contact-title">Contact</h1>
+        <div class="contact-header header">
+          <h1 class="contact-title">Contact</h1>
+          <span>Let's talk</span>
+        </div>
         <div class="contact-container">
           <div class="contact-info">
             <p><span>RESIDENCE:</span>Italy, Ravenna</p>
@@ -277,9 +307,9 @@
 
       <footer>
         <div class="social-links">
-          <a href="#"><i class="fab fa-linkedin-in fa-sm"></i></a>
-          <a href="#"><i class="fab fa-facebook-f fa-sm"></i></a>
-          <a href="#"><i class="fab fa-twitter fa-sm"></i></a>
+          <a href="https://it.linkedin.com/" target="_blank"><i class="fab fa-linkedin-in fa-sm"></i></a>
+          <a href="https://it.facebook.com/" target="_blank"><i class="fab fa-facebook-f fa-sm"></i></a>
+          <a href="https://twitter.com/" target="_blank"><i class="fab fa-twitter fa-sm"></i></a>
         </div>
       </footer>
 
