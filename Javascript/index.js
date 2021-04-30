@@ -4,18 +4,38 @@ setTimeout(function() {
   document.querySelector('.loader-bg-2').classList.add('timeout');
 }, 1000);
 
-// close the menu when the menu icon is clicked
+// close the menu and activate menu icon animation when a nav link is clicked
+const menuBtn = document.querySelector('.menu-btn');
+let menuOpen = false;
 document.querySelectorAll('a[href*="section"]').forEach(a => {
   a.addEventListener('click', function (e) {
     document.querySelector('#check').checked = false;
+    if(!menuOpen) {
+      menuBtn.classList.add('open');
+      menuOpen = true;
+    } else {
+      menuBtn.classList.remove('open');
+      menuOpen = false;
+    }
   })
+});
+
+// activate the menu icon animation when the icon is clicked
+menuBtn.addEventListener('click', () => {
+  if(!menuOpen) {
+    menuBtn.classList.add('open');
+    menuOpen = true;
+  } else {
+    menuBtn.classList.remove('open');
+    menuOpen = false;
+  }
 });
 
 // open the project information page when a project box is clicked
 document.querySelectorAll('.project-box').forEach(box => {
   box.addEventListener('click', function (e) {
     document.querySelector('body').style.overflow = "hidden";
-    e.target.parentElement.parentElement.nextElementSibling.style.left = "0";
+    box.nextElementSibling.style.left = "0";
   })
 });
 
@@ -23,7 +43,9 @@ document.querySelectorAll('.project-box').forEach(box => {
 document.querySelectorAll('.close-img').forEach(icon => {
   icon.addEventListener('click', function (e) {
     document.querySelector('body').style.overflow = "auto";
-    e.target.parentElement.style.left = "-100%";
+    document.querySelectorAll('.project-info').forEach(project => {
+      project.style.left = "-100%";
+    });
   })
 });
 
@@ -31,16 +53,14 @@ document.querySelectorAll('.close-img').forEach(icon => {
 window.addEventListener('scroll', function (e) {
   let nav = document.querySelector('nav');
 
-  let welcomeLink = document.querySelector('a[href="#welcome-section"]');
+  let welcomeLink = document.querySelector('.nav-welcome-link');
   let skillsLink = document.querySelector('a[href="#skills-section"]');
   let projectsLink = document.querySelector('a[href="#projects-section"]');
-  let resumeLink = document.querySelector('a[href="#resume-section"]');
   let contactLink = document.querySelector('a[href="#contact-section"]');
 
   let welcomeSection = document.querySelector('.welcome-section');
   let skillsSection = document.querySelector('.skills-section');
   let projectsSection = document.querySelector('.projects-section');
-  let resumeSection = document.querySelector('.resume-section');
   let contactSection = document.querySelector('.contact-section');
 
   // change nav style when at the top of the page
@@ -63,20 +83,14 @@ window.addEventListener('scroll', function (e) {
     projectsLink.style.color = "#ffffff";
   }
   else if(projectsSection.getBoundingClientRect().top - 85  <= 0 &&
-          resumeSection.getBoundingClientRect().top - 85  > 0) {
+          contactSection.getBoundingClientRect().top - 85  > 0) {
     projectsLink.style.color = "#68e0cf";
     skillsLink.style.color = "#ffffff";
-    resumeLink.style.color = "#ffffff";
-  }
-  else if(resumeSection.getBoundingClientRect().top - 85  <= 0 &&
-          contactSection.getBoundingClientRect().top - 85  > 0) {
-    resumeLink.style.color = "#68e0cf";
-    projectsLink.style.color = "#ffffff";
     contactLink.style.color = "#ffffff";
   }
   else if(contactSection.getBoundingClientRect().top - 85  <= 0) {
     contactLink.style.color = "#68e0cf";
-    resumeLink.style.color = "#ffffff";
+    projectsLink.style.color = "#ffffff";
   }
 });
 
@@ -90,18 +104,5 @@ document.querySelector('.checkbtn').addEventListener('click', function (e) {
       nav.style.backgroundColor = "#373b40";
     else
       nav.style.backgroundColor = "#585d65";
-  }
-});
-
-// activate the menu icon animation
-const menuBtn = document.querySelector('.menu-btn');
-let menuOpen = false;
-menuBtn.addEventListener('click', () => {
-  if(!menuOpen) {
-    menuBtn.classList.add('open');
-    menuOpen = true;
-  } else {
-    menuBtn.classList.remove('open');
-    menuOpen = false;
   }
 });

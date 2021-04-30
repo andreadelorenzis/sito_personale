@@ -512,6 +512,7 @@ section {
   width: 100%;
   cursor: pointer;
   overflow: hidden;
+  border-radius: 10px;
 }
 
 .project-title {
@@ -522,9 +523,17 @@ section {
   position: relative;
   width: 100%;
   padding-bottom: 70%;
-  border-radius: 10px;
   background: #585d65;
   transition: all .3s;
+  overflow: hidden;
+}
+
+.project-title .project-img img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
 }
 
 .project-title .project-img h2{
@@ -551,28 +560,169 @@ section {
 
 .project-info {
   position: fixed;
-  width: 100%;
   height: 100vh;
-  background-color: #585d65;
   top: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #585d65;
   left: -100%;
-  text-align: center;
   transition: all .5s;
   z-index: 100;
-  overflow: auto;
+  overflow-y: auto;
+  overflow-x: hidden;
+  display: flex;
+  justify-content: center;
 }
 
-.project-info .close-img {
+.project-info .content {
+  width: 80%;
+  max-width: 1300px;
+  position: relative;
+}
+
+.project-info .content .close-img {
   position: absolute;
   top: 25px;
-  right: 25px;
-  width: 30px;
-  height: 30px;
+  right: 0;
+  width: 50px;
+  height: 50px;
   cursor: pointer;
+  border: 1px solid #b4b6ba;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.project-info h1 {
+.project-info .content .close-img img {
+  width: 20px;
+  height: 20px;
+}
+
+.project-info .content h1 {
+  font-size: 35px;
+  margin-top: 100px;
+}
+
+.project-info .header span {
+  color: #68e0cf;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.image-and-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   margin-top: 50px;
+}
+
+.project-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+.project-links a {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50px;
+  font-size: 15px;
+  color: white;
+}
+
+.project-links a .animation-span {
+  height: 15px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.project-links .demo {
+  border: 1px solid #fff;
+  width: 50%;
+  transition: all .3s;
+  display: flex;
+  flex-direction: column;
+  margin-right: 10px;
+}
+
+.project-links .github {
+  border: 1px solid #fff;
+  width: 50%;
+  transition: all .3s;
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+}
+
+.project-links a .animation-span span{
+  position: relative;
+  top: 0;
+  transition: top .3s;
+  height: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.project-links a .animation-span span:nth-child(2) {
+  color: #68e0cf;
+}
+
+.project-links a:hover .animation-span span {
+  top: -15px;
+}
+
+.project-links a:hover {
+  border: 1px solid #68e0cf;
+}
+
+.project-info .project-image {
+  width: 100%;
+}
+
+.project-info .project-image img {
+  width: 100%;
+  height: auto;
+}
+
+.project-info .content .text h3 {
+  margin: 0;
+}
+
+.project-info .content .text p{
+  margin: 10px 0;
+}
+
+.project-info .content .text .technology-labels {
+  width: 100%;
+  margin: 25px 0;
+  text-align: left;
+}
+
+.project-info .content .text .technology-labels span{
+  background-color: #373b40;
+  border-radius: 5px;
+  padding: 5px 10px;
+  font-size: 12px;
+  color: #ffffff;
+  display: inline-block;
+}
+
+.coming-soon {
+  font-size: 35px;
+  color: #68e0cf;
+  text-transform: uppercase;
+  font-weight: 800;
+  position: absolute;
+  top: 50%;
+  width: 300px;
+  left: calc(50% - 150px);
 }
 
 .contact-section {
@@ -731,6 +881,35 @@ footer .social-links a:active {
     text-align: left;
   }
 
+  .welcome-section {
+    flex-direction: row;
+    justify-content: center;
+    padding-bottom: 100px;
+    padding-top: 180px;
+  }
+
+  .welcome-img-container {
+    width: 40%;
+    max-width: 410px;
+    max-height: 410px;
+    margin-right: 20px;
+  }
+
+  .welcome-text {
+    width: 55%;
+    margin-left: 20px;
+    align-items: flex-start;
+  }
+
+  .welcome-text h1 {
+    margin-top: 5px;
+  }
+
+  .welcome-text .welcome-description {
+    margin-top: 10px;
+    text-align: justify;
+  }
+
   .skills-container {
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 4rem;
@@ -764,35 +943,61 @@ footer .social-links a:active {
     padding-top: 0;
   }
 
-  .welcome-section {
+  .project-info .content .image-and-text {
     flex-direction: row;
-    justify-content: center;
-    padding-bottom: 100px;
-    padding-top: 180px;
+    justify-content: space-between;
+    margin-top: 50px;
   }
 
+  .project-info .content .image-and-links {
+    width: 50%;
+    margin-right: 50px;
+  }
+
+  .project-info .content .image-and-text .project-image{
+    width: 100%;
+  }
+
+  .project-info .content .image-and-text .text {
+    width: 50%;
+    margin: 0;
+  }
+
+  .project-info .content .image-and-text .text h3:first-of-type {
+    margin-bottom: 20px;
+  }
+
+  .project-info .content .image-and-text .text p:first-of-type {
+    margin: 0;
+    margin-bottom: 20px;
+  }
+
+/*
   .welcome-img-container {
-    width: 40%;
-    max-width: 410px;
-    max-height: 410px;
-    margin-right: 20px;
+    width: 100%;
+    max-width: 380px;
+    max-height: 380px;
+    display: flex;
+    justify-content: center;
   }
 
-  .welcome-text {
-    width: 55%;
-    margin-left: 20px;
-    align-items: flex-start;
+  .welcome-img-wrapper {
+    height: 0;
+    min-width: 230px;
+    min-height: 230px;
+    width: 100%;
+    padding-bottom: 100%;
+    background-color: rgba(100, 212, 194, 0.8);
+    border-radius: 50%;
   }
 
-  .welcome-text h1 {
-    margin-top: 5px;
+  .welcome-image{
+    border-radius: 50%;
+    width: 90%;
+    height: auto;
+    margin-top: 5%;
   }
-
-  .welcome-text .welcome-description {
-    margin-top: 10px;
-    text-align: justify;
-  }
-
+*/
 }
 
 @media screen and (min-width: 1280px) {
