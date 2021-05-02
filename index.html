@@ -11,45 +11,47 @@
   </head>
   <body>
 
-    <div class="loader-bg-1 timeout">
-      <div class="loader-bg-2 timeout">
+    <!-- Pre-loader -->
+    <div class="loader__bg-1">
+      <div class="loader__bg-2">
         <div class="loader"></div>
       </div>
     </div>
 
-    <nav>
-      <div class="content">
-        <a class="logo-link" href="#welcome-section">
-          <span class="logo-icon">A</span>
-          <span class="logo-text">Andrea De Lorenzis</span>
+    <!-- Navigation menu -->
+    <nav class="nav">
+      <div class="nav__container">
+        <a class="nav__logo-link" href="#welcome-section">
+          <span class="nav__logo-icon">A</span>
+          <span class="nav__logo-text">Andrea De Lorenzis</span>
         </a>
-        <input type="checkbox" id="check">
-        <label for="check" class="checkbtn">
-          <div class="menu-btn">
-            <div class="menu-btn-burger"></div>
+        <input type="checkbox" id="nav__check">
+        <label for="nav__check" class="nav__checkbtn">
+          <div class="nav__menu-btn">
+            <div class="nav__menu-btn-burger"></div>
           </div>
         </label>
-        <ul class="nav-links">
+        <ul class="nav__list">
           <li>
-            <a href="#welcome-section" class="nav-welcome-link">
+            <a href="#welcome-section" class="nav__link nav__link--welcome">
               <span class="uno">Welcome</span>
               <span class="due">Welcome</span>
             </a>
           </li>
           <li>
-            <a href="#skills-section">
+            <a href="#skills-section" class="nav__link nav__link--skills">
               <span class="uno">Skills</span>
               <span class="due">Skills</span>
             </a>
           </li>
           <li>
-            <a href="#projects-section">
+            <a href="#projects-section" class="nav__link nav__link--projects">
               <span class="uno">Projects</span>
               <span class="due">Projects</span>
             </a>
           </li>
           <li>
-            <a href="#contact-section">
+            <a href="#contact-section" class="nav__link nav__link--contact">
               <span class="uno">Contact</span>
               <span class="due">Contact</span>
             </a>
@@ -58,29 +60,30 @@
       </div>
     </nav>
 
+    <!-- First section (welcome) -->
     <a name="welcome-section"></a>
-      <section class="welcome-section">
-        <div class="welcome-img-container">
-          <div class="welcome-img-wrapper">
-              <img src="images/profile-picture.jpeg" alt="" class="welcome-image">
+      <section class="welcome">
+        <div class="welcome__img-container">
+          <div class="welcome__img-wrapper">
+              <img src="images/profile-picture.jpeg" alt="" class="welcome__image">
           </div>
         </div>
-        <div class="welcome-text">
+        <div class="welcome__text">
           <p>Full Stack Developer</p>
           <h1>Andrea De Lorenzis</h1>
-          <p class="welcome-description">Hello! I am a Full Stack Web Developer from Italy, Urbin. I have experience in web and mobile
+          <p class="welcome__description">Hello! I am a Full Stack Web Developer from Italy, Urbin. I have experience in web and mobile
              application design and building. As long as I have a mockup to work on, I can take care of the frontend and backend part of
             the project. You can contact me for more information.
           </p>
-          <div class="welcome-buttons">
-            <a href="#" class="download">
-              <span class="animation-span">
+          <div class="welcome__buttons">
+            <a href="#" class="welcome__button welcome__button--download">
+              <span class="welcome__button-animation">
                 <span>Download CV</span>
                 <span>Download CV</span>
               </span>
             </a>
-            <a href="#contact-section" class="contact">
-              <span class="animation-span">
+            <a href="#contact-section" class="welcome__button welcome__button--contact">
+              <span class="welcome__button-animation">
                 <span>Contact</span>
                 <span>Contact</span>
               </span>
@@ -91,21 +94,22 @@
 
       <hr>
 
+      <!-- Second section (skills) -->
       <a name="skills-section"></a>
-      <section class="skills-section">
-        <div class="skills-header header">
+      <section class="skills">
+        <div class="section__header">
           <h1>My skills</h1>
           <span>What I can do</span>
         </div>
-        <div class="skills-container">
-          <div class="skill-box">
-            <div class="skill-title">
-              <div class="skill-icons">
-                <div class="skill-img">
-                  <img src="images/html-5.png" alt="html and css" class="skill-icon">
+        <div class="skills__container">
+          <div class="skills__box">
+            <div class="skills__title">
+              <div class="skills__icons">
+                <div class="skills__img">
+                  <img src="images/html-5.png" alt="html and css">
                 </div>
-                <div class="skill-img">
-                  <img src="images/css-3.png" alt="html and css" class="skill-icon">
+                <div class="skills__img">
+                  <img src="images/css-3.png" alt="html and css">
                 </div>
               </div>
               <h3>HTML 5 & CSS 3</h3>
@@ -113,61 +117,61 @@
             <p>I can create pages using HTML and CSS that are responsive, accessible and search-engine friendly, while implementing the UI design
                with precision.</p>
           </div>
-          <div class="skill-box">
-            <div class="skill-title">
-              <div class="skill-icons">
-                <div class="skill-img">
-                  <img src="images/javascript.png" alt="javascript" class="skill-icon">
+          <div class="skills__box">
+            <div class="skills__title">
+              <div class="skills__icons">
+                <div class="skills__img">
+                  <img src="images/javascript.png" alt="javascript">
                 </div>
               </div>
               <h3>Javascript</h3>
             </div>
             <p>I am proficient in the use of Javascript both client-side and server-side. I write robust, efficient, clean code that gets the job done.</p>
           </div>
-          <div class="skill-box">
-            <div class="skill-title">
-              <div class="skill-icons">
-                <div class="skill-img">
-                  <img src="images/physics.png" alt="react.js" class="skill-icon">
+          <div class="skills__box">
+            <div class="skills__title">
+              <div class="skills__icons">
+                <div class="skills__img">
+                  <img src="images/physics.png" alt="react.js">
                 </div>
               </div>
               <h3>React.js</h3>
             </div>
             <p>I mastered the React.js framework and I am able to create complex interactive user interfaces.</p>
           </div>
-          <div class="skill-box">
-            <div class="skill-title">
-              <div class="skill-icons">
-                <div class="skill-img">
-                  <img src="images/wordpress.png" alt="wordpress" class="skill-icon">
+          <div class="skills__box">
+            <div class="skills__title">
+              <div class="skills__icons">
+                <div class="skills__img">
+                  <img src="images/wordpress.png" alt="wordpress">
                 </div>
               </div>
               <h3>Wordpress</h3>
             </div>
             <p>I can create simple websites using Wordpress, using an existing template or developing one from scratch.</p>
           </div>
-          <div class="skill-box">
-            <div class="skill-title">
-              <div class="skill-icons">
-                <div class="skill-img">
-                  <img src="images/php.png" alt="c language" class="skill-icon">
+          <div class="skills__box">
+            <div class="skills__title">
+              <div class="skills__icons">
+                <div class="skills__img">
+                  <img src="images/php.png" alt="c language">
                 </div>
-                <div class="skill-img">
-                  <img src="images/nodejs.png" alt="c language" class="skill-icon">
+                <div class="skills__img">
+                  <img src="images/nodejs.png" alt="c language">
                 </div>
               </div>
               <h3>PHP/Node.js</h3>
             </div>
             <p>For backend development I am proficient with Php and Node.js and I use them to create secure and robust backend servers and apis.</p>
           </div>
-          <div class="skill-box">
-            <div class="skill-title">
-              <div class="skill-icons">
-                <div class="skill-img">
-                  <img src="images/physics.png" alt="react.js" class="skill-icon">
+          <div class="skills__box">
+            <div class="skills__title">
+              <div class="skills__icons">
+                <div class="skills__img">
+                  <img src="images/physics.png" alt="react.js">
                 </div>
-                <div class="skill-img">
-                  <img src="images/flutter.jpg" alt="react.js" class="skill-icon">
+                <div class="skills__img">
+                  <img src="images/flutter.jpg" alt="react.js">
                 </div>
               </div>
               <h3>React Native/Flutter</h3>
@@ -180,56 +184,59 @@
 
       <hr>
 
-      <section class="projects-section">
-        <div class="project-header header">
-          <h1 class="projects-title">Portfolio</h1>
+      <!-- Third section (projects) -->
+      <section class="projects">
+        <div class="section__header">
+          <h1>Portfolio</h1>
           <span>Latest works</span>
         </div>
-        <div class="projects-container">
-          <div class="project-box">
-              <div class="project-title">
-                <div src="images/th.jpg" alt="" class="project-img">
+        <div class="projects__container">
+
+          <!-- First project -->
+          <div class="projects__box">
+              <div class="projects__title">
+                <div class="projects__img">
                   <img src="./images/project_1.png" alt="javascript counter">
                 </div>
                 <h3>Javascript counter</h3>
               </div>
           </div>
-          <div class="first project-info">
-            <div class="content">
-              <div class="close-img">
+          <div class="first projects__info">
+            <div class="projects__info-container">
+              <div class="projects__close-img">
                 <img src="images/close.svg" alt="close">
               </div>
-              <div class="header">
+              <div class="section__header projects__header">
                 <h1>Beutiful counter</h1>
                 <span>A simple js counter</span>
               </div>
-              <div class="image-and-text">
-                <div class="image-and-links">
-                  <div class="project-image">
+              <div class="projects__body">
+                <div class="projects__image-and-links">
+                  <div class="projects__info-image">
                     <img src="./images/project_1.png" alt="javascript counter">
                   </div>
-                  <div class="project-links">
-                    <a href="#" class="demo">
-                      <span class="animation-span">
+                  <div class="projects__links">
+                    <a href="#" class="projects__button projects__button--demo">
+                      <span class="projects__button-animation">
                         <span>Demo</span>
                         <span>Demo</span>
                       </span>
                     </a>
-                    <a href="#" class="github">
-                      <span class="animation-span">
+                    <a href="#" class="projects__button projects__button--github">
+                      <span class="projects__button-animation">
                         <span>Github</span>
                         <span>Github</span>
                       </span>
                     </a>
                   </div>
                 </div>
-                <div class="text">
+                <div class="projects__text">
                   <h3>Description</h3>
                   <p>This project consists in a counter written with vanilla Javascript and it was created as an assignment
                   of the Start2Impact course. The main feature that makes this counter unique is that it is implemented as a
                   score board. Furthermore it has three buttons created by me that give the impression of real buttons.</p>
                   <h3>Technology</h3>
-                  <div class="technology-labels">
+                  <div class="projects__technology">
                     <span>HTML5</span>
                     <span>CSS3</span>
                     <span>Javascript</span>
@@ -238,126 +245,148 @@
               </div>
             </div>
           </div>
-          <div class="project-box">
-              <div class="project-title">
-                <div src="images/th.jpg" alt="" class="project-img">
+
+          <!-- Second project -->
+          <div class="projects__box">
+              <div class="projects__title">
+                <div class="projects__img">
                   <h2>Coming soon...</h2>
                 </div>
                 <h3>City pollution displayer</h3>
               </div>
           </div>
-          <div class="second project-info">
-            <div class="content">
-              <div class="close-img">
+          <div class="first projects__info">
+            <div class="projects__info-container">
+              <div class="projects__close-img">
                 <img src="images/close.svg" alt="close">
               </div>
-              <div class="header">
+              <div class="section__header">
                 <h1>City pollution displayer</h1>
                 <span class="coming-soon">Coming soon...</span>
               </div>
             </div>
           </div>
-          <div class="project-box">
-              <div class="project-title">
-                <div src="images/th.jpg" alt="" class="project-img">
+
+          <!-- Third project -->
+          <div class="projects__box">
+              <div class="projects__title">
+                <div class="projects__img">
                   <h2>Coming soon...</h2>
                 </div>
                 <h3>Recycling days tracker</h3>
               </div>
           </div>
-          <div class="third project-info">
-            <div class="content">
-              <div class="close-img">
+          <div class="first projects__info">
+            <div class="projects__info-container">
+              <div class="projects__close-img">
                 <img src="images/close.svg" alt="close">
               </div>
-              <h1>Recycling days tracker</h1>
+              <div class="section__header">
+                <h1>Recycling days tracker</h1>
+                <span class="coming-soon">Coming soon...</span>
+              </div>
             </div>
           </div>
-          <div class="project-box">
-              <div class="project-title">
-                <div src="images/th.jpg" alt="" class="project-img">
+
+          <!-- Fourth project -->
+          <div class="projects__box">
+              <div class="projects__title">
+                <div class="projects__img">
                   <h2>Coming soon...</h2>
                 </div>
                 <h3>Polluted places reporting app</h3>
               </div>
           </div>
-          <div class="fourth project-info">
-            <div class="content">
-              <div class="close-img">
+          <div class="first projects__info">
+            <div class="projects__info-container">
+              <div class="projects__close-img">
                 <img src="images/close.svg" alt="close">
               </div>
-              <h1>Polluted places reporting app</h1>
+              <div class="section__header">
+                <h1>Polluted places reporting app</h1>
+                <span class="coming-soon">Coming soon...</span>
+              </div>
             </div>
           </div>
-          <div class="project-box">
-              <div class="project-title">
-                <div src="images/th.jpg" alt="" class="project-img">
+
+          <!-- Fifth project -->
+          <div class="projects__box">
+              <div class="projects__title">
+                <div class="projects__img">
                   <h2>Coming soon...</h2>
                 </div>
                 <h3>Wordpress website</h3>
               </div>
           </div>
-          <div class="fifth project-info">
-            <div class="content">
-              <div class="close-img">
+          <div class="first projects__info">
+            <div class="projects__info-container">
+              <div class="projects__close-img">
                 <img src="images/close.svg" alt="close">
               </div>
-              <h1>Wordpress website</h1>
+              <div class="section__header">
+                <h1>Wordpress website</h1>
+                <span class="coming-soon">Coming soon...</span>
+              </div>
             </div>
           </div>
-          <a class="project-box">
-              <div class="project-title">
-                <div src="images/th.jpg" alt="" class="project-img">
+
+          <!-- Sixth project -->
+          <div class="projects__box">
+              <div class="projects__title">
+                <div class="projects__img">
                   <h2>Coming soon...</h2>
                 </div>
                 <h3>Booking management app</h3>
               </div>
-          </a>
-          <div class="sixth project-info">
-            <div class="content">
-              <div class="close-img">
+          </div>
+          <div class="first projects__info">
+            <div class="projects__info-container">
+              <div class="projects__close-img">
                 <img src="images/close.svg" alt="close">
               </div>
-              <h1>Booking management app</h1>
+              <div class="section__header">
+                <h1>Booking management app</h1>
+                <span class="coming-soon">Coming soon...</span>
+              </div>
             </div>
           </div>
         </div>
       </section>
-
       <hr>
 
+      <!-- Fourth section (contact) -->
       <a name="contact-section"></a>
-      <section class="contact-section">
-        <div class="contact-header header">
-          <h1 class="contact-title">Contact</h1>
+      <section class="contact">
+        <div class="section__header">
+          <h1>Contact</h1>
           <span>Let's talk</span>
         </div>
-        <div class="contact-container">
-          <div class="contact-info">
+        <div class="contact__container">
+          <div class="contact__info">
             <p><span>RESIDENCE:</span>Italy, Ravenna</p>
             <p><span>PHONE:</span>+31 331 140 6443</p>
             <p><span>EMAIL:</span>andreadelorenzis99@gmail.com</p>
           </div>
-          <div class="contact-form">
-            <h3 class="form-title">How can I help you?</h3>
-            <div class="form-group">
-              <span class="label">Full Name</span>
+          <div class="contact__form">
+            <h3>How can I help you?</h3>
+            <div class="contact__form-group">
+              <span>Full Name</span>
               <input type="text" placeholder="ej.:John Smith">
             </div>
-            <div class="form-group">
-              <span class="label">Email address</span>
+            <div class="contact__form-group">
+              <span>Email address</span>
               <input type="text" placeholder="Email Address">
             </div>
-            <div class="form-group">
-              <span class="label">Subject</span>
+            <div class="contact__form-group">
+              <span>Subject</span>
               <input type="text" placeholder="Subject">
             </div>
-            <div class="form-group">
-              <span class="label">Message</span>
+            <div class="contact__form-group">
+              <span>Message</span>
               <textarea placeholder="Message" rows="10"></textarea>
             </div>
-            <button>
-              <span class="animation-span">
+            <button class="contact__button">
+              <span class="contact__button-animation">
                 <span>Send message</span>
                 <span>Send message</span>
               </span>
@@ -368,14 +397,16 @@
 
       <hr>
 
-      <footer>
-        <div class="social-links">
+      <!-- Footer -->
+      <footer class="footer">
+        <div class="footer__links">
           <a href="https://it.linkedin.com/" target="_blank"><i class="fab fa-linkedin-in fa-sm"></i></a>
           <a href="https://it.facebook.com/" target="_blank"><i class="fab fa-facebook-f fa-sm"></i></a>
           <a href="https://twitter.com/" target="_blank"><i class="fab fa-twitter fa-sm"></i></a>
         </div>
       </footer>
 
+      <!-- Scripts -->
     <script type="text/javascript" src="Javascript/index.js"></script>
   </body>
 </html>
