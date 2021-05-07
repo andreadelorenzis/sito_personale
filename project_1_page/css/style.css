@@ -1,3 +1,5 @@
+
+/* Globals */
 html,
 body {
   width: 100vw;
@@ -15,6 +17,15 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+button {
+  border: none;
+  outline: none;
+  border-style: none;
+  border-width: 0;
+  border-color: transparent;
+  border-image: none;
 }
 
 .container {
@@ -39,16 +50,8 @@ h1 {
   text-transform: uppercase;
 }
 
-button {
-  border: none;
-  outline: none;
-  border-style: none;
-  border-width: 0;
-  border-color: transparent;
-  border-image: none;
-}
-
-.flip-clock-container {
+/* Score board */
+.score-board {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -59,91 +62,78 @@ button {
   margin-bottom: 30px;
 }
 
-.flip-clock-container * {
+.score-board * {
   -webkit-user-select: none;
   -moz-user-select: none;
   user-select: none;
-
   cursor: default;
 }
 
-.flip-clock {
+.score-board__inner {
   display: flex;
-
   -webkit-perspective: 1000px;
   -moz-perspective: 1000px;
   perspective: 1000px;
 }
 
-.digit {
+.score-board__digit {
   position: relative;
-
   width: 200px;
   height: 300px;
-
   box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.1);
 }
 
-.digit::before,
-.digit::after {
+.score-board__digit::before,
+.score-board__digit::after {
   position: absolute;
   z-index: 0;
-
   display: flex;
   justify-content: center;
-
   width: 100%;
   height: 50%;
   overflow: hidden;
 }
 
-.digit::before {
+.score-board__digit::before {
   content: attr(data-digit-before);
-
   bottom: 0;
   align-items: flex-start;
 }
 
-.digit::after {
+.score-board__digit::after {
   content: attr(data-digit-after);
-
   top: 0;
   align-items: flex-end;
 }
 
-.card {
+.score-board__card {
   position: relative;
   z-index: 1;
-
   width: 100%;
   height: 50%;
-
   -webkit-transform-style: preserve-3d;
   -moz-transform-style: preserve-3d;
   transform-style: preserve-3d;
-
   -webkit-transform-origin: bottom;
   -moz-transform-origin: bottom;
   transform-origin: bottom;
-
   -webkit-transform: rotateX(0);
   -moz-transform: rotateX(0);
   transform: rotateX(0);
-
  -webkit-transition: transform 0.5s ease-in-out;
  -moz-transition: transform 0.5s ease-in-out;
   transition: transform 0.5s ease-in-out;
 }
 
-.card.flipped-down{
+.score-board__card.flipped-down{
   transform: rotateX(-180deg);
 }
 
-.card.flipped-up{
+.score-board__card.flipped-up{
   transform: rotateX(0);
 }
 
-.card-face, .card-face-next {
+.score-board__card-face {
   position: absolute;
 
   display: flex;
@@ -158,11 +148,11 @@ button {
   backface-visibility: hidden;
 }
 
-.card-face-front {
+.score-board__card-face--front {
   align-items: flex-end;
 }
 
-.card-face-back {
+.score-board__card-face--back {
   align-items: flex-start;
 
   -webkit-transform: rotateX(-180deg);
@@ -170,24 +160,24 @@ button {
   transform: rotateX(-180deg);
 }
 
-.digit,
-.digit::before,
-.digit::after,
-.card,
-.card-face {
+.score-board__digit,
+.score-board__digit::before,
+.score-board__digit::after,
+.score-board__card,
+.score-board__card-face {
   border-radius: 4px;
 }
 
-.digit::before,
-.digit::after,
-.card-face-front,
-.card-face-back {
+.score-board__digit::before,
+.score-board__digit::after,
+.score-board__card-face--front,
+.score-board__card-face--back {
   background: white;
   color: black;
 }
 
-.digit::before,
-.card-face-back {
+.score-board__digit::before,
+.score-board__card-face--back {
   background: linear-gradient(0, #aaa, #ccc 50%, #fafafa);
   color: #212121;
 
@@ -196,8 +186,8 @@ button {
   border-top-right-radius: 0;
 }
 
-.digit::after,
-.card-face-front {
+.score-board__digit::after,
+.score-board__card-face--front {
   background: linear-gradient(0, #aaa, #bbb 50%, #f5f5f5);
   color: #212121;
 
@@ -206,11 +196,7 @@ button {
   border-bottom-right-radius: 0;
 }
 
-/* buttons */
-
-/* color: #f98365 */
-/* text-color: #f76743 */
-
+/* Buttons */
 .buttons {
   display: flex;
   justify-content: center;
@@ -218,7 +204,7 @@ button {
   margin-bottom: 30px;
 }
 
-.button {
+.buttons__wrapper button {
   cursor: pointer;
   margin-left: 5px;
   margin-bottom: 15px;
@@ -244,32 +230,29 @@ button {
   position: relative;
 }
 
-.reset-btn {
-  width: 150px;
-}
-
-.button:visited {
+.buttons__wrapper button:visited {
   color: #6d503f;
 }
 
-.button:hover {
+.buttons__wrapper button:hover {
   background: linear-gradient(to bottom, #dd9a72 0%, #c79679 26%, #a37960 100%);
 }
 
-.button:active {
+.buttons__wrapper button:active {
   top: 6px;
   text-shadow: 0 -2px 0 #8d6852,
                0 1px 1px #bb9c8a,
                0 0 4px white;
   color: #eae0db;
 }
-.button:active:before {
+
+.buttons__wrapper button:active:before {
   top: 0;
   box-shadow: 0 3px 3px rgba(0, 0, 0, 0.7),
               0 3px 9px rgba(0, 0, 0, 0.2);
 }
 
-.button:before {
+.buttons__wrapper button:before {
   display: inline-block;
   content: "";
   position: absolute;
@@ -286,7 +269,11 @@ button {
               0 10.8px 9px rgba(0, 0, 0, 0.2);
 }
 
-.clicked {
+.buttons__wrapper .buttons__reset {
+  width: 150px;
+}
+
+.buttons__wrapper button.clicked {
   top: 6px;
   text-shadow: 0 -2px 0 #8d6852,
                0 1px 1px #bb9c8a,
@@ -294,12 +281,15 @@ button {
   color: #eae0db;
 }
 
-.clicked:before {
+.buttons__wrapper button.clicked:before {
   top: 0;
   box-shadow: 0 3px 3px rgba(0, 0, 0, 0.7),
               0 3px 9px rgba(0, 0, 0, 0.2);
 }
 
+/* Media queries */
+
+/* Medium and large */
 @media screen and (min-width: 1000px) {
   h1 {
     font-size: 40px;
@@ -310,16 +300,16 @@ button {
     max-height: 700px;
   }
 
-  .flip-clock-container {
+  .score-board {
     font-size: 250px;
   }
 
-  .digit {
+  .score-board__digit {
     width: 280px;
     height: 420px;
   }
 
-  .button {
+  .buttons__wrapper button {
     width: 80px;
     height: 80px;
     line-height: 80px;
@@ -327,26 +317,25 @@ button {
     padding: 0 15px;
   }
 
-  .reset-btn {
+  .buttons__wrapper .buttons__reset {
     width: 200px;
     margin: 0 40px;
   }
 
-  .button:active {
+  .buttons__wrapper button:active {
     top: 8px;
   }
 
-  .button:before {
+  .buttons__wrapper button:before {
     top: 8px;
     height: 80px;
   }
 
-  .clicked {
+  .buttons__wrapper button.clicked {
     top: 8px;
   }
 
-  .clicked:before {
+  .buttons__wrapper button.clicked:before {
     top: 0;
   }
-
 }

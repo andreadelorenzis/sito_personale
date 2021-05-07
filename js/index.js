@@ -3,6 +3,7 @@ let body = document.querySelector('body');
 let nav = document.querySelector('.nav');
 const navCheck = document.querySelector('#nav__check')
 const menuBtn = document.querySelector('.nav__menu-btn');
+let navArrow = document.querySelectorAll('.nav__arrow');
 let welcomeLink = document.querySelector('.nav__link--welcome');
 let skillsLink = document.querySelector('.nav__link--skills');
 let projectsLink = document.querySelector('.nav__link--projects');
@@ -11,6 +12,16 @@ let welcomeSection = document.querySelector('.welcome');
 let skillsSection = document.querySelector('.skills');
 let projectsSection = document.querySelector('.projects');
 let contactSection = document.querySelector('.contact');
+
+
+/* remove nav arrow if in first section */
+if(welcomeSection.getBoundingClientRect().top - 85  <= 0 &&
+   skillsSection.getBoundingClientRect().top - 85  > 0) {
+  welcomeLink.style.color = "#68e0cf";
+  skillsLink.style.color = "#ffffff";
+
+  navArrow[0].classList.add('hidden');
+}
 
 // activate preloader animation
 setTimeout(function() {
@@ -63,27 +74,35 @@ window.addEventListener('scroll', function (e) {
     nav.style.backgroundColor = "#585d65";
   }
 
-  // highlight nav links relative to page sections when scrolling the page
+  // when scrolling the page, highlight nav links and toggle nav arrow relative to page sections
   if(welcomeSection.getBoundingClientRect().top - 85  <= 0 &&
      skillsSection.getBoundingClientRect().top - 85  > 0) {
     welcomeLink.style.color = "#68e0cf";
     skillsLink.style.color = "#ffffff";
+
+    navArrow[0].classList.add('hidden');
   }
   else if(skillsSection.getBoundingClientRect().top - 85  <= 0 &&
           projectsSection.getBoundingClientRect().top - 85  > 0) {
     skillsLink.style.color = "#68e0cf";
     welcomeLink.style.color = "#ffffff";
     projectsLink.style.color = "#ffffff";
+
+    navArrow[0].classList.remove('hidden');
   }
   else if(projectsSection.getBoundingClientRect().top - 85  <= 0 &&
           contactSection.getBoundingClientRect().top - 85  > 0) {
     projectsLink.style.color = "#68e0cf";
     skillsLink.style.color = "#ffffff";
     contactLink.style.color = "#ffffff";
+
+    navArrow[0].classList.remove('hidden');
   }
   else if(contactSection.getBoundingClientRect().top - 85  <= 0) {
     contactLink.style.color = "#68e0cf";
     projectsLink.style.color = "#ffffff";
+
+    navArrow[0].classList.remove('hidden');
   }
 });
 

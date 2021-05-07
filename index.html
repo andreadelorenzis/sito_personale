@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
+
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
@@ -9,11 +10,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/f3c6b5ebd7.js" crossorigin="anonymous"></script>
   </head>
+
   <body>
 
     <!-- Pre-loader -->
-    <div class="loader__bg-1">
-      <div class="loader__bg-2">
+    <div class="loader__bg-1 timeout">
+      <div class="loader__bg-2 timeout">
         <div class="loader"></div>
       </div>
     </div>
@@ -58,6 +60,10 @@
           </li>
         </ul>
       </div>
+      <!-- remove thi comment -->
+      <a href="#welcome-section" class="nav__arrow">
+        <i class="fas fa-sort-up fa-3x"></i>
+      </a>
     </nav>
 
     <!-- First section (welcome) -->
@@ -216,7 +222,7 @@
                     <img src="./images/project_1.png" alt="javascript counter">
                   </div>
                   <div class="projects__links">
-                    <a href="#" class="projects__button projects__button--demo">
+                    <a href="./project_1_page/counter.html" class="projects__button projects__button--demo">
                       <span class="projects__button-animation">
                         <span>Demo</span>
                         <span>Demo</span>
@@ -260,7 +266,7 @@
               <div class="projects__close-img">
                 <img src="images/close.svg" alt="close">
               </div>
-              <div class="section__header">
+              <div class="section__header projects__header">
                 <h1>City pollution displayer</h1>
                 <span class="coming-soon">Coming soon...</span>
               </div>
@@ -281,7 +287,7 @@
               <div class="projects__close-img">
                 <img src="images/close.svg" alt="close">
               </div>
-              <div class="section__header">
+              <div class="section__header projects__header">
                 <h1>Recycling days tracker</h1>
                 <span class="coming-soon">Coming soon...</span>
               </div>
@@ -302,7 +308,7 @@
               <div class="projects__close-img">
                 <img src="images/close.svg" alt="close">
               </div>
-              <div class="section__header">
+              <div class="section__header projects__header">
                 <h1>Polluted places reporting app</h1>
                 <span class="coming-soon">Coming soon...</span>
               </div>
@@ -323,7 +329,7 @@
               <div class="projects__close-img">
                 <img src="images/close.svg" alt="close">
               </div>
-              <div class="section__header">
+              <div class="section__header projects__header">
                 <h1>Wordpress website</h1>
                 <span class="coming-soon">Coming soon...</span>
               </div>
@@ -344,7 +350,7 @@
               <div class="projects__close-img">
                 <img src="images/close.svg" alt="close">
               </div>
-              <div class="section__header">
+              <div class="section__header projects__header">
                 <h1>Booking management app</h1>
                 <span class="coming-soon">Coming soon...</span>
               </div>
@@ -367,7 +373,7 @@
             <p><span>PHONE:</span>+31 331 140 6443</p>
             <p><span>EMAIL:</span>andreadelorenzis99@gmail.com</p>
           </div>
-          <div class="contact__form">
+          <form action="mailto:andreadelorenzis99@gmail.com" method="post" class="contact__form">
             <h3>How can I help you?</h3>
             <div class="contact__form-group">
               <span>Full Name</span>
@@ -385,13 +391,13 @@
               <span>Message</span>
               <textarea placeholder="Message" rows="10"></textarea>
             </div>
-            <button class="contact__button">
+            <button type="submit" class="contact__button">
               <span class="contact__button-animation">
                 <span>Send message</span>
                 <span>Send message</span>
               </span>
             </button>
-          </div>
+          </form>
         </div>
       </section>
 
@@ -407,6 +413,6 @@
       </footer>
 
       <!-- Scripts -->
-    <script type="text/javascript" src="Javascript/index.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
   </body>
 </html>
