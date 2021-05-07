@@ -7,4 +7,4 @@ This project is created with:
 * CSS3
 * Javascript
 
-You can visit the website at www.andreadelorenzis.com.
+You can visit the website at https://www.andreadelorenzis.com.
