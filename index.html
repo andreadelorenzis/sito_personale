@@ -71,7 +71,7 @@
   <section class="welcome">
     <div class="welcome__img-container">
       <div class="welcome__img-wrapper">
-        <img src="images/profile-picture.jpeg" alt="" class="welcome__image">
+        <img src="images/profile_picture.jpg" alt="" class="welcome__image">
       </div>
     </div>
     <div class="welcome__text">
@@ -133,11 +133,14 @@
             <div class="skills__img">
               <img src="images/javascript.png" alt="javascript">
             </div>
+            <div class="skills__img">
+              <img src="images/typescript.png" alt="Typescript">
+            </div>
           </div>
-          <h3>Javascript</h3>
+          <h3>Javascript & Typescript</h3>
         </div>
-        <p>I am proficient in the use of Javascript both client-side and server-side. I write robust, efficient, clean
-          code that gets the job done.</p>
+        <p>I am proficient in the use of Javascript and Typescript, both client-side and server-side. I write robust,
+          efficient, cleancode that gets the job done.</p>
       </div>
       <div class="skills__box">
         <div class="skills__title">
@@ -145,35 +148,37 @@
             <div class="skills__img">
               <img src="images/physics.png" alt="react.js">
             </div>
+            <div class="skills__img">
+              <img src="images/redux.png" alt="Redux">
+            </div>
           </div>
-          <h3>React.js</h3>
+          <h3>React & Redux</h3>
         </div>
-        <p>I mastered the React.js framework and I am able to create complex interactive user interfaces.</p>
+        <p>I mastered the React.js framework and I am able to create complex interactive user interfaces. I'm able to
+          use
+          the Redux library for efficient state management</p>
       </div>
       <div class="skills__box">
         <div class="skills__title">
           <div class="skills__icons">
             <div class="skills__img">
-              <img src="images/wordpress.png" alt="wordpress">
+              <img src="images/java.png" alt="Java">
             </div>
           </div>
-          <h3>Wordpress</h3>
+          <h3>Java</h3>
         </div>
-        <p>I can create simple websites using Wordpress, using an existing template or developing one from scratch.</p>
+        <p>I know the both the Java programming language and some GUI libraries (JavaFX, Swing).</p>
       </div>
       <div class="skills__box">
         <div class="skills__title">
           <div class="skills__icons">
-            <div class="skills__img">
-              <img src="images/php.png" alt="c language">
-            </div>
             <div class="skills__img">
               <img src="images/nodejs.png" alt="c language">
             </div>
           </div>
-          <h3>PHP/Node.js</h3>
+          <h3>Node.js</h3>
         </div>
-        <p>For backend development I am proficient with Php and Node.js and I use them to create secure and robust
+        <p>For backend development I am proficient with Node.js and I use it to create secure and robust
           backend servers and apis.</p>
       </div>
       <div class="skills__box">
@@ -186,7 +191,7 @@
               <img src="images/flutter.jpg" alt="react.js">
             </div>
           </div>
-          <h3>React Native/Flutter</h3>
+          <h3>React Native & Flutter</h3>
         </div>
         <p>I can use one of these two frameworks to create Full Stack Hybrid Mobile apps that work on Android and Ios.
         </p>
@@ -209,6 +214,58 @@
       <div class="projects__box">
         <div class="projects__title">
           <div class="projects__img">
+            <img src="./images/timetracker.PNG" alt="BusyRabbit">
+          </div>
+          <h3>BusyRabbit</h3>
+        </div>
+      </div>
+      <div class="first projects__info">
+        <div class="projects__info-container">
+          <div class="projects__close-img">
+            <img src="images/close.svg" alt="close">
+          </div>
+          <div class="section__header projects__header">
+            <h1>BusyRabbit</h1>
+            <span>An app for productivity</span>
+          </div>
+          <div class="projects__body">
+            <div class="projects__image-and-links">
+              <div class="projects__info-image">
+                <img src="./images/timetracker.PNG" alt="javascript counter">
+              </div>
+              <div class="projects__links projects__links--single">
+                <a href="https://github.com/andreadelorenzis/BusyRabbit"
+                  class="projects__button projects__button--github" target="_blank">
+                  <span class="projects__button-animation">
+                    <span>Github</span>
+                    <span>Github</span>
+                  </span>
+                </a>
+              </div>
+            </div>
+            <div class="projects__text">
+              <h3>Description</h3>
+              <p>BusyRabbit is a personal productivity app designed primarily for students. It is a project created as a
+                group for the Object Oriented programming course at University of Urbino.
+                All main concepts of OOP were used during this project, including a variety of design patterns like MVC
+                (model-view-controller) and Observer.
+              </p>
+              <h3>Technology</h3>
+              <div class="projects__technology">
+                <span>Java</span>
+                <span>JavaFX</span>
+                <span>CSS</span>
+                <span>JUnit5</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Second project -->
+      <div class="projects__box">
+        <div class="projects__title">
+          <div class="projects__img">
             <img src="./images/project_1.png" alt="javascript counter">
           </div>
           <h3>Javascript counter</h3>
@@ -220,7 +277,7 @@
             <img src="images/close.svg" alt="close">
           </div>
           <div class="section__header projects__header">
-            <h1>Beutiful counter</h1>
+            <h1>Beautiful counter</h1>
             <span>A simple js counter</span>
           </div>
           <div class="projects__body">
@@ -229,13 +286,14 @@
                 <img src="./images/project_1.png" alt="javascript counter">
               </div>
               <div class="projects__links">
-                <a href="./project_1_page/counter.html" class="projects__button projects__button--demo">
+                <a href="./project_1_page/counter.html" class="projects__button projects__button--demo" target="_blank">
                   <span class="projects__button-animation">
                     <span>Demo</span>
                     <span>Demo</span>
                   </span>
                 </a>
-                <a href="#" class="projects__button projects__button--github">
+                <a href="https://github.com/andreadelorenzis/beautiful-counter.js"
+                  class="projects__button projects__button--github" target="_blank">
                   <span class="projects__button-animation">
                     <span>Github</span>
                     <span>Github</span>
@@ -261,34 +319,13 @@
         </div>
       </div>
 
-      <!-- Second project -->
-      <div class="projects__box">
-        <div class="projects__title">
-          <div class="projects__img">
-            <h2>Coming soon...</h2>
-          </div>
-          <h3>City pollution displayer</h3>
-        </div>
-      </div>
-      <div class="first projects__info">
-        <div class="projects__info-container">
-          <div class="projects__close-img">
-            <img src="images/close.svg" alt="close">
-          </div>
-          <div class="section__header projects__header">
-            <h1>City pollution displayer</h1>
-            <span class="coming-soon">Coming soon...</span>
-          </div>
-        </div>
-      </div>
-
       <!-- Third project -->
       <div class="projects__box">
         <div class="projects__title">
           <div class="projects__img">
-            <h2>Coming soon...</h2>
+            <img src="./images/sito.PNG" alt="Portfolio">
           </div>
-          <h3>Recycling days tracker</h3>
+          <h3>Portfolio</h3>
         </div>
       </div>
       <div class="first projects__info">
@@ -297,8 +334,37 @@
             <img src="images/close.svg" alt="close">
           </div>
           <div class="section__header projects__header">
-            <h1>Recycling days tracker</h1>
-            <span class="coming-soon">Coming soon...</span>
+            <h1>Portfolio</h1>
+            <span>The home of my projects</span>
+          </div>
+          <div class="projects__body">
+            <div class="projects__image-and-links">
+              <div class="projects__info-image">
+                <img src="./images/sito.PNG" alt="javascript counter">
+              </div>
+              <div class="projects__links projects__links--single">
+                <a href="https://github.com/andreadelorenzis/sito_personale"
+                  class="projects__button projects__button--github" target="_blank">
+                  <span class="projects__button-animation">
+                    <span>Github</span>
+                    <span>Github</span>
+                  </span>
+                </a>
+              </div>
+            </div>
+            <div class="projects__text">
+              <h3>Description</h3>
+              <p>A simple portoflio website made with simple HTML. It features different sections and a working form to
+                send messages,
+                which are delivered directly to my mailbox.
+              </p>
+              <h3>Technology</h3>
+              <div class="projects__technology">
+                <span>HTML5</span>
+                <span>CSS3</span>
+                <span>Javascript</span>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -307,9 +373,9 @@
       <div class="projects__box">
         <div class="projects__title">
           <div class="projects__img">
-            <h2>Coming soon...</h2>
+            <h2>Work in progress...</h2>
           </div>
-          <h3>Polluted places reporting app</h3>
+          <h3>CV Builder</h3>
         </div>
       </div>
       <div class="first projects__info">
@@ -318,8 +384,8 @@
             <img src="images/close.svg" alt="close">
           </div>
           <div class="section__header projects__header">
-            <h1>Polluted places reporting app</h1>
-            <span class="coming-soon">Coming soon...</span>
+            <h1>CV builder</h1>
+            <span class="coming-soon">Work in progress...</span>
           </div>
         </div>
       </div>
@@ -330,7 +396,7 @@
           <div class="projects__img">
             <h2>Coming soon...</h2>
           </div>
-          <h3>Wordpress website</h3>
+          <h3>Social network</h3>
         </div>
       </div>
       <div class="first projects__info">
@@ -339,32 +405,12 @@
             <img src="images/close.svg" alt="close">
           </div>
           <div class="section__header projects__header">
-            <h1>Wordpress website</h1>
+            <h1>Social network</h1>
             <span class="coming-soon">Coming soon...</span>
           </div>
         </div>
       </div>
 
-      <!-- Sixth project -->
-      <div class="projects__box">
-        <div class="projects__title">
-          <div class="projects__img">
-            <h2>Coming soon...</h2>
-          </div>
-          <h3>Booking management app</h3>
-        </div>
-      </div>
-      <div class="first projects__info">
-        <div class="projects__info-container">
-          <div class="projects__close-img">
-            <img src="images/close.svg" alt="close">
-          </div>
-          <div class="section__header projects__header">
-            <h1>Booking management app</h1>
-            <span class="coming-soon">Coming soon...</span>
-          </div>
-        </div>
-      </div>
     </div>
   </section>
   <hr>
@@ -384,6 +430,7 @@
       </div>
       <div class="contact__form">
         <h3>How can I help you?</h3>
+        <!-- Form works with FormSubmit (Check: "https://formsubmit.co/") -->
         <form action="https://formsubmit.co/e969d9e799077d66e6b99928d98a9fec" method="POST">
           <div class="contact__form-group">
             <span>Full Name</span>
