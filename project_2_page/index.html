@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>Sorting Visualizer</title>
+    <script src="https://kit.fontawesome.com/f3c6b5ebd7.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="toolbar">
+        <div class="container">
+            <select class="select algorithm" id="algorithm">
+                <option value="algorithm" disabled selected>Algorithm</option>
+                <option value="Bubble Sort">Bubble Sort</option>
+                <option value="Insertion Sort">Insertion Sort</option>
+                <option value="Selection Sort">Selection Sort</option>
+                <option value="Merge Sort">Merge Sort</option>
+            </select>
+            <select class="select speed" id="speed">
+                <option value="speed" disabled selected>Speed</option>
+                <option value="5">5 ms</option>
+                <option value="50">50 ms</option>
+                <option value="500">500 ms</option>
+                <option value="1000">1000 ms</option>
+            </select>
+            <div class="slider">
+                <label for="range">Array Size</label>
+                <input type="range" id="range" name="slider" min="4" max="300">
+            </div>
+            <input type="submit" class="btn sort-btn" value="SORT!">
+            <input type="submit" class="btn btn-danger stop-btn inactive" value="STOP!">
+        </div>
+    </div>
+    <div class="array-container">
+
+    </div>
+    <footer>
+        <p>Project made by <a href="#">Andrea De Lorenzis</a></p>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
