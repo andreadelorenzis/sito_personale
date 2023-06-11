@@ -640,6 +640,7 @@ section {
   flex-direction: column;
   justify-content: center;
   margin-top: 50px;
+  margin-bottom: 15px;
 }
 
 .projects__info-image {
@@ -649,6 +650,11 @@ section {
 .projects__info-image img {
   width: 100%;
   height: auto;
+}
+
+.projects__info-image--phone {
+  max-width: 40%;
+  margin: 0 auto;
 }
 
 .projects__links {
@@ -713,6 +719,7 @@ section {
 
 .projects__text p {
   margin: 10px 0;
+  margin-bottom: 20px;
 }
 
 .projects__technology {
@@ -729,6 +736,113 @@ section {
   color: #ffffff;
   display: inline-block;
   margin-bottom: 7px;
+}
+
+.projects__slider {
+  width: 100%;
+  max-width: 800px;
+  height: auto;
+  position: relative;
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 15px;
+  margin-bottom: 100px;
+  margin-top: 15px;
+  aspect-ratio: 16/9;
+}
+
+.projects__slider__slide {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transition: all 0.5s;
+  scroll-behavior: none;
+  cursor: pointer;
+}
+
+.projects__slider__slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.projects__slider__slide span {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  z-index: 20;
+  background-color: #ffffff;
+  border-radius: 5px;
+  padding: 5px 10px;
+  font-size: 12px;
+  color: #333;
+  display: inline-block;
+}
+
+.projects__slider__slide--full img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.projects__box__modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  text-align: center;
+}
+
+.projects__box__modal img {
+  max-width: 80%;
+  max-height: 80%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.projects__box__modal__close {
+  color: #fff;
+  font-size: 40px;
+  font-weight: bold;
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  cursor: pointer;
+}
+
+.projects__slider__btn {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  padding: 10px;
+  border: none;
+  border-radius: 50%;
+  z-index: 10px;
+  cursor: pointer;
+  background-color: #fff;
+  font-size: 18px;
+}
+
+.projects__slider__btn:active {
+  transform: scale(1.1);
+}
+
+.projects__slider__btn--next {
+  top: 45%;
+  right: 2%;
+}
+
+.projects__slider__btn--prev {
+  top: 45%;
+  left: 2%;
 }
 
 .coming-soon {
@@ -947,6 +1061,10 @@ section {
 
   .projects__info-image {
     width: 100%;
+  }
+
+  .projects__info-image--phone {
+    max-width: 300px;
   }
 
   .projects__text {

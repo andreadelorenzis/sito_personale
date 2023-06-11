@@ -15,8 +15,8 @@ let contactSection = document.querySelector('.contact');
 
 
 /* remove nav arrow if in first section */
-if(welcomeSection.getBoundingClientRect().top - 85  <= 0 &&
-   skillsSection.getBoundingClientRect().top - 85  > 0) {
+if (welcomeSection.getBoundingClientRect().top - 85 <= 0 &&
+  skillsSection.getBoundingClientRect().top - 85 > 0) {
   welcomeLink.style.color = "#68e0cf";
   skillsLink.style.color = "#ffffff";
 
@@ -24,7 +24,7 @@ if(welcomeSection.getBoundingClientRect().top - 85  <= 0 &&
 }
 
 // activate preloader animation
-setTimeout(function() {
+setTimeout(function () {
   document.querySelector('.loader__bg-1').classList.add('timeout');
   document.querySelector('.loader__bg-2').classList.add('timeout');
 }, 1000);
@@ -39,7 +39,7 @@ document.querySelectorAll('.nav__link').forEach(a => {
 
 // activate the menu icon animation when the icon is clicked
 menuBtn.addEventListener('click', () => {
-  if(!navCheck.checked) {
+  if (!navCheck.checked) {
     menuBtn.classList.add('open');
   } else {
     menuBtn.classList.remove('open');
@@ -68,37 +68,37 @@ document.querySelectorAll('.projects__close-img').forEach(icon => {
 window.addEventListener('scroll', function (e) {
 
   // change nav style when at the top of the page
-  if(window.scrollY == 0) {
+  if (window.scrollY == 0) {
     nav.style.backgroundColor = "#373b40";
   } else {
     nav.style.backgroundColor = "#585d65";
   }
 
   // when scrolling the page, highlight nav links and toggle nav arrow relative to page sections
-  if(welcomeSection.getBoundingClientRect().top - 85  <= 0 &&
-     skillsSection.getBoundingClientRect().top - 85  > 0) {
+  if (welcomeSection.getBoundingClientRect().top - 85 <= 0 &&
+    skillsSection.getBoundingClientRect().top - 85 > 0) {
     welcomeLink.style.color = "#68e0cf";
     skillsLink.style.color = "#ffffff";
 
     navArrow[0].classList.add('hidden');
   }
-  else if(skillsSection.getBoundingClientRect().top - 85  <= 0 &&
-          projectsSection.getBoundingClientRect().top - 85  > 0) {
+  else if (skillsSection.getBoundingClientRect().top - 85 <= 0 &&
+    projectsSection.getBoundingClientRect().top - 85 > 0) {
     skillsLink.style.color = "#68e0cf";
     welcomeLink.style.color = "#ffffff";
     projectsLink.style.color = "#ffffff";
 
     navArrow[0].classList.remove('hidden');
   }
-  else if(projectsSection.getBoundingClientRect().top - 85  <= 0 &&
-          contactSection.getBoundingClientRect().top - 85  > 0) {
+  else if (projectsSection.getBoundingClientRect().top - 85 <= 0 &&
+    contactSection.getBoundingClientRect().top - 85 > 0) {
     projectsLink.style.color = "#68e0cf";
     skillsLink.style.color = "#ffffff";
     contactLink.style.color = "#ffffff";
 
     navArrow[0].classList.remove('hidden');
   }
-  else if(contactSection.getBoundingClientRect().top - 85  <= 0) {
+  else if (contactSection.getBoundingClientRect().top - 85 <= 0) {
     contactLink.style.color = "#68e0cf";
     projectsLink.style.color = "#ffffff";
 
@@ -111,10 +111,93 @@ document.querySelector('.nav__checkbtn').addEventListener('click', function (e) 
   let nav = document.querySelector('.nav');
   let check = document.querySelector('#nav__check').checked;
 
-  if(window.scrollY == 0) {
-    if(check)
+  if (window.scrollY == 0) {
+    if (check)
       nav.style.backgroundColor = "#373b40";
     else
       nav.style.backgroundColor = "#585d65";
   }
+});
+
+/* SLIDER */
+
+// Select all slides
+const slides = document.querySelectorAll(".projects__slider__slide");
+
+// loop through slides and set each slides translateX property to index * 100% 
+slides.forEach((slide, indx) => {
+  slide.style.transform = `translateX(${indx * 100}%)`;
+});
+
+// current slide counter
+let curSlide = 0;
+// maximum number of slides
+let maxSlide = slides.length - 1;
+
+// select next slide button
+const nextSlide = document.querySelector(".projects__slider__btn--next");
+
+// add event listener and next slide functionality
+nextSlide.addEventListener("click", function () {
+  // check if current slide is the last and reset current slide
+  if (curSlide === maxSlide) {
+    curSlide = 0;
+  } else {
+    curSlide++;
+  }
+
+  //   move slide by -100%
+  slides.forEach((slide, indx) => {
+    slide.style.transform = `translateX(${100 * (indx - curSlide)}%)`;
+  });
+});
+
+// select prev slide button
+const prevSlide = document.querySelector(".projects__slider__btn--prev");
+
+// add event listener and navigation functionality
+prevSlide.addEventListener("click", function () {
+  // check if current slide is the first and reset current slide to last
+  if (curSlide === 0) {
+    curSlide = maxSlide;
+  } else {
+    curSlide--;
+  }
+
+  //   move slide by 100%
+  slides.forEach((slide, indx) => {
+    slide.style.transform = `translateX(${100 * (indx - curSlide)}%)`;
+  });
+});
+
+/* Image modal */
+document.addEventListener('DOMContentLoaded', function () {
+  const modal = document.getElementById('modal');
+  const modalImage = document.getElementById('modalImage');
+  const closeButton = document.getElementsByClassName('projects__box__modal__close')[0];
+  const galleryImages = document.getElementsByClassName('modal__image');
+
+  function openModal(imageSrc) {
+    modal.style.display = 'block';
+    modalImage.src = imageSrc;
+  }
+
+  function closeModal() {
+    modal.style.display = 'none';
+  }
+
+  for (let i = 0; i < galleryImages.length; i++) {
+    galleryImages[i].addEventListener('click', function (event) {
+      const clickedImageSrc = event.target.src;
+      openModal(clickedImageSrc);
+    });
+  }
+
+  closeButton.addEventListener('click', closeModal);
+
+  window.addEventListener('click', function (event) {
+    if (event.target === modal) {
+      closeModal();
+    }
+  });
 });
